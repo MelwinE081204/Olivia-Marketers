@@ -147,8 +147,13 @@ export const ScratchCardModal: React.FC<ScratchCardModalProps> = ({ isOpen, onCl
   const hasCards = (currentUser?.scratchCardsAvailable || 0) > 0;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="relative w-full max-w-sm bg-gradient-to-b from-slate-800 to-slate-900 border border-amber-500/30 rounded-2xl p-5 shadow-2xl overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="relative w-full max-w-sm bg-gradient-to-b from-slate-800 to-slate-900 border-t sm:border border-amber-500/30 rounded-t-3xl sm:rounded-3xl p-5 shadow-2xl overflow-hidden animate-in slide-in-from-bottom duration-250">
+        {/* Mobile Drag Indicator Bar */}
+        <div className="w-full pt-0.5 pb-3 flex justify-center">
+          <div className="w-12 h-1.5 bg-slate-600 rounded-full" />
+        </div>
+
         {/* Glow backdrop */}
         <div className="absolute -top-16 -right-16 w-36 h-36 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-16 -left-16 w-36 h-36 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none" />
@@ -156,7 +161,7 @@ export const ScratchCardModal: React.FC<ScratchCardModalProps> = ({ isOpen, onCl
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800/80 hover:bg-slate-700 flex items-center justify-center text-slate-400 hover:text-white transition-colors"
         >
           <X className="w-4 h-4" />
         </button>

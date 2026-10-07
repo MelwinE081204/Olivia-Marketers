@@ -35,7 +35,7 @@ export const PassbookView: React.FC = () => {
     .reduce((sum, e) => sum + e.points, 0);
 
   return (
-    <div className="pb-24 pt-2 px-3 sm:px-4 max-w-lg mx-auto space-y-4">
+    <div className="pb-8 pt-1 px-3 sm:px-4 w-full space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">

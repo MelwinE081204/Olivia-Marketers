@@ -38,8 +38,8 @@ export const LoginView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col justify-center px-4 py-8">
-      <div className="w-full max-w-sm mx-auto space-y-5">
+    <div className="w-full flex-1 bg-slate-950 flex flex-col justify-center px-4 py-6 overflow-y-auto no-scrollbar">
+      <div className="w-full max-w-sm mx-auto space-y-4">
         {/* Brand Lockup */}
         <div className="text-center space-y-2">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-emerald-700 mx-auto flex items-center justify-center shadow-xl shadow-emerald-500/20 text-slate-950 font-black text-2xl tracking-tighter">

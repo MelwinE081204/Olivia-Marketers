@@ -65,8 +65,13 @@ export const VoucherReceiptView: React.FC<VoucherReceiptViewProps> = ({ voucher,
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-md bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl overflow-hidden max-h-[95vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-md bg-slate-900 border-t sm:border border-slate-700 rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden max-h-[95vh] flex flex-col animate-in slide-in-from-bottom duration-250">
+        {/* Mobile Drag Indicator Bar */}
+        <div className="w-full pt-2.5 pb-1 flex justify-center bg-slate-900">
+          <div className="w-12 h-1.5 bg-slate-700 rounded-full" />
+        </div>
+
         {/* Top Action Bar */}
         <div className="px-5 py-3 border-b border-slate-800 flex items-center justify-between bg-slate-900/90">
           <div className="flex items-center gap-2">

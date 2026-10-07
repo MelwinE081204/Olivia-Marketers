@@ -60,8 +60,8 @@ export const BottomNav: React.FC<BottomNavProps> = ({
   const tabs = getTabs();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
-      <div className="max-w-md mx-auto grid grid-flow-col auto-cols-fr items-center h-16 px-1">
+    <nav className="sticky bottom-0 z-40 w-full bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
+      <div className="w-full grid grid-flow-col auto-cols-fr items-center h-16 px-1">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
@@ -71,14 +71,14 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             <button
               key={tab.id}
               onClick={() => onTabChange(tab.id)}
-              className={`relative min-h-[48px] flex flex-col items-center justify-center rounded-lg transition-all active:scale-95 ${
+              className={`relative min-h-[48px] flex flex-col items-center justify-center rounded-xl transition-all active:scale-95 ${
                 isActive ? 'text-emerald-400 font-semibold' : 'text-slate-400 hover:text-slate-200'
               }`}
             >
               <div className="relative">
                 {isHighlight ? (
                   <div
-                    className={`w-9 h-9 rounded-full flex items-center justify-center transition-all ${
+                    className={`w-9 h-9 rounded-2xl flex items-center justify-center transition-all ${
                       isActive
                         ? 'bg-emerald-500 text-slate-950 shadow-lg shadow-emerald-500/30'
                         : 'bg-emerald-600/30 text-emerald-400 border border-emerald-500/40'
@@ -98,7 +98,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
                 )}
               </div>
 
-              <span className={`text-[10px] tracking-tight mt-1 whitespace-nowrap truncate max-w-[64px] ${isActive ? 'text-emerald-400' : 'text-slate-400'}`}>
+              <span className={`text-[10px] tracking-tight mt-1 whitespace-nowrap truncate max-w-[64px] ${isActive ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}>
                 {tab.label}
               </span>
 
@@ -108,6 +108,11 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             </button>
           );
         })}
+      </div>
+
+      {/* iOS Home Indicator Bar */}
+      <div className="w-full pb-1.5 pt-0.5 flex justify-center bg-slate-900/95">
+        <div className="w-28 h-1 bg-slate-700/80 rounded-full" />
       </div>
     </nav>
   );

@@ -40,7 +40,7 @@ export const ProductCatalogView: React.FC = () => {
   });
 
   return (
-    <div className="pb-24 pt-2 px-3 sm:px-4 max-w-lg mx-auto space-y-4">
+    <div className="pb-8 pt-1 px-3 sm:px-4 w-full space-y-4">
       {/* Navigation Segmented Control */}
       <div className="flex items-center gap-1 p-1 bg-slate-900 rounded-xl border border-slate-800">
         <button
