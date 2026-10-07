@@ -1,0 +1,6 @@
+{
+  "name": "OLIVIA REWARDS - Contractor & Merchant Loyalty Hub",
+  "description": "Official loyalty program by Olivia Marketers. Track contractor stock purchases, earn points, and claim offline cash vouchers with real-time admin reconciliation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
